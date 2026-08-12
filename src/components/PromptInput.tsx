@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { clampPrompt } from '../utils/prompt';
 
 interface PromptInputProps {
   onGenerate: (prompt: string) => void;
@@ -37,7 +38,7 @@ export function PromptInput({ onGenerate, isLoading }: PromptInputProps) {
       <form onSubmit={handleSubmit} className="prompt-form">
         <textarea
           value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
+          onChange={(e) => setPrompt(clampPrompt(e.target.value))}
           placeholder="예: 고객 목록 테이블 위에 들어갈 검색 필터 바를 만들어줘. 상태, 담당자, 날짜 범위 필터가 필요해."
           className="prompt-textarea"
           rows={3}
