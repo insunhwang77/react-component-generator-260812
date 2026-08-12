@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --background: #15141b;
+  --foreground: #efeae2;
+}
+
+body {
+  font-family:
+    'IBM Plex Sans KR', 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+  background:
+    radial-gradient(1100px 560px at 10% -12%, rgba(232, 163, 61, 0.09), transparent 60%),
+    var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  scrollbar-color: #454152 transparent;
+  scrollbar-width: thin;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(232, 163, 61, 0.32);
+  color: var(--foreground);
+}
